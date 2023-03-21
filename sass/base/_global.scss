@@ -1,0 +1,98 @@
+@use "../abstracts/variables" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: $color-blue-primary;
+    background-color: $color-white-grey;
+    line-height: 26px;
+    margin: 0 auto;
+    overflow-x: hidden;
+   font-family: $font-family;
+  }
+  
+
+main {
+  
+  
+}
+
+h1 {
+  color: #222731;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 20px 0 26px 0;
+  
+  
+
+  &__theme-switcher {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__theme-text {
+    color: $color-steel-blue;
+    font-weight: $font-bold;
+    letter-spacing: 2.5px;
+  }
+
+  &__theme-icon {
+    margin-top: 0.3rem;
+  }
+ 
+}
+
+// Search Bar
+.search-bar {
+  // border: 2px solid red;
+  background-color: $color-white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  height: 60px;
+  
+
+  &__input {
+    width: 60%;
+    height: 60px;
+    font-family: inherit;
+    padding-left: 0.5rem;
+    border: 0;
+    
+  }
+}
+
+.btn-search {
+  background-color: $color-blue-primary;
+  border: 0;
+  border-radius: 15px;
+  color: $color-white;
+  padding: 1rem;
+  font-family: inherit;
+  font-weight: 700;
+  // cursor: pointer;
+}
+
+.search-bar > svg:nth-child(1) {
+  margin-left: 0.5rem;
+ }
+ 
