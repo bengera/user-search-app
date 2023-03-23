@@ -14,18 +14,15 @@ html {
 }
 
 body {
-    background-color: $color-blue-primary;
-    background-color: $color-white-grey;
-    line-height: 26px;
-    margin: 0 auto;
-    overflow-x: hidden;
-   font-family: $font-family;
-  }
-  
+  background-color: $color-blue-primary;
+  background-color: $color-white-grey;
+  line-height: 26px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: $font-family;
+}
 
 main {
-  
-  
 }
 
 h1 {
@@ -37,8 +34,6 @@ h1 {
   justify-content: space-between;
   padding: 1rem;
   margin: 20px 0 26px 0;
-  
-  
 
   &__theme-switcher {
     display: flex;
@@ -54,7 +49,6 @@ h1 {
   &__theme-icon {
     margin-top: 0.3rem;
   }
- 
 }
 
 // Search Bar
@@ -65,11 +59,13 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 90%;
+  max-width: 95%;
   margin: 0 auto;
   padding: 0.5rem;
   height: 60px;
-  
+  // box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
+  // -webkit-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
+  // -moz-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
 
   &__input {
     width: 60%;
@@ -77,13 +73,14 @@ h1 {
     font-family: inherit;
     padding-left: 0.5rem;
     border: 0;
-    
+    color: $color-steel-blue;
   }
 }
 
 .btn-search {
   background-color: $color-blue-primary;
   border: 0;
+  width: 84px;
   border-radius: 15px;
   color: $color-white;
   padding: 1rem;
@@ -94,5 +91,123 @@ h1 {
 
 .search-bar > svg:nth-child(1) {
   margin-left: 0.5rem;
- }
- 
+}
+
+.display,
+.search-bar {
+  box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
+}
+
+.display {
+  background-color: $color-white-smoke;
+  border-radius: 20px;
+  max-width: 95%;
+  padding: 1rem;
+  margin: 0 auto;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+//profile
+.profile {
+  // border: 2px solid red;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  padding: 1rem;
+
+  &__picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  &__name {
+  }
+
+  &__username {
+    color: $color-blue-primary;
+  }
+
+  &__joined {
+    color: $color-slate-grey;
+  }
+
+  &__bio {
+    color: $color-steel-blue;
+    grid-column: 1/-1;
+    margin-top: 2.0625rem;
+  }
+}
+
+// stats
+.stats {
+  display: flex;
+  justify-content: space-around;
+  background-color: $color-white-grey;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+
+  &__left {
+  }
+
+  &__repos {
+    color: $color-steel-blue;
+    margin-bottom: 8px;
+  }
+
+  &__repo-number {
+    color: $color-navy-blue;
+    font-weight: $font-bold;
+    
+    
+  }
+
+  &__middle {
+  }
+
+  &__followers {
+    color: $color-steel-blue;
+    margin-bottom: 8px;
+  }
+
+  &__followers-number {
+    color: $color-navy-blue;
+    font-weight: $font-bold;
+  }
+
+  &__right {
+  }
+
+  &__following {
+    color: $color-steel-blue;
+    margin-bottom: 8px;
+  }
+
+  &__following-number {
+    color: $color-navy-blue;
+    font-weight: $font-bold;
+    margin-bottom: 8px;
+  }
+
+  
+}
+
+//links
+.links {
+  &__location {
+  }
+
+  &__twitter {
+  }
+
+  &__website {
+  }
+
+  &__company {
+  }
+}
