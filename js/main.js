@@ -1,17 +1,14 @@
 const themeButton = document.getElementById("theme-switcher");
 const iconMoon = document.getElementById('icon-moon');
 const iconSun = document.getElementById('icon-sun');
-const textNode = themeButton.childNodes[1];
+const textNode = themeButton.childNodes[0];
+
 
 
 themeButton.addEventListener('click', switchTheme);
 
 function switchTheme() {
-  if (textNode.nodeValue === "Light") {
-    textNode.nodeValue = "Dark";
-  } else {
-    textNode.nodeValue = "Light";
-  }
+ 
         // Get all elements in the document
     const elements = document.querySelectorAll('*');
         // Loop through each element
@@ -26,7 +23,8 @@ function switchTheme() {
             element.classList.add('dark');
             iconMoon.style.display= 'none';
             iconSun.style.display= 'block';
-           
+            textNode.textContent = 'LIGHT';
+            themeButton.style.color = '#FFF';
                        
            
           } else if (className === 'dark') {
@@ -34,6 +32,8 @@ function switchTheme() {
             element.classList.add('light');
             iconMoon.style.display= 'block';
             iconSun.style.display= 'none';
+            textNode.textContent = 'DARK';
+            themeButton.style.color = '#4b6A9B';
             
                        
           }
@@ -41,5 +41,6 @@ function switchTheme() {
       }
     });
   }
+
 
 
