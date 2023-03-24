@@ -12,16 +12,14 @@ html {
 }
 
 body {
-  background-color: #0079FF;
-  background-color: #F6F8FF;
   line-height: 26px;
   margin: 0 auto;
   overflow-x: hidden;
   font-family: "Space Mono", monospace;
 }
 
-h1 {
-  color: #222731;
+::placeholder {
+  opacity: 1;
 }
 
 .top-bar {
@@ -45,7 +43,6 @@ h1 {
 }
 
 .search-bar {
-  background-color: #FFF;
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
@@ -79,15 +76,7 @@ h1 {
   margin-left: 0.5rem;
 }
 
-.display,
-.search-bar {
-  box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
-  -moz-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
-}
-
 .display {
-  background-color: #FEFEFE;
   border-radius: 20px;
   max-width: 95%;
   padding: 1rem;
@@ -111,9 +100,6 @@ h1 {
 .profile__username {
   color: #0079FF;
 }
-.profile__joined {
-  color: #697C9A;
-}
 .profile__bio {
   color: #4b6A9B;
   grid-column: 1/-1;
@@ -123,33 +109,26 @@ h1 {
 .stats {
   display: flex;
   justify-content: space-around;
-  background-color: #F6F8FF;
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
 }
 .stats__repos {
-  color: #4b6A9B;
   margin-bottom: 8px;
 }
 .stats__repo-number {
-  color: #2B3442;
   font-weight: 700;
 }
 .stats__followers {
-  color: #4b6A9B;
   margin-bottom: 8px;
 }
 .stats__followers-number {
-  color: #2B3442;
   font-weight: 700;
 }
 .stats__following {
-  color: #4b6A9B;
   margin-bottom: 8px;
 }
 .stats__following-number {
-  color: #2B3442;
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -158,7 +137,6 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  color: #4b6A9B;
   margin-bottom: 2.5rem;
   padding: 0.5rem;
 }
@@ -169,12 +147,130 @@ h1 {
   margin-bottom: 3px;
 }
 a {
-  color: #4b6A9B;
   text-decoration: none;
 }
 
 input:focus {
   outline: 1px dotted #697C9A;
+}
+
+#icon-moon {
+  display: block;
+}
+
+#icon-sun {
+  display: none;
+}
+
+body.light {
+  background-color: #F6F8FF;
+}
+
+h1.light {
+  color: #222731;
+}
+
+.profile__name.light,
+.profile__joined.light,
+.profile__bio.light {
+  color: #697C9A;
+}
+
+.search-bar.light,
+.search-bar__input.light {
+  background-color: #FFF;
+}
+
+.stats.light {
+  background-color: #F6F8FF;
+}
+
+.stats__repos.light,
+.stats__followers.light,
+.stats__following.light {
+  color: #4b6A9B;
+}
+
+.stats__repo-number.light,
+.stats__followers-number.light,
+.stats__following-number.light {
+  color: #2B3442;
+}
+
+.display.light {
+  background-color: #FEFEFE;
+}
+
+.display.light,
+.search-bar.light {
+  box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
+}
+
+.search-bar__input.light {
+  color: #4b6A9B;
+}
+
+.links.light {
+  color: #4b6A9B;
+}
+
+a.light {
+  color: #4b6A9B;
+}
+
+body.dark {
+  background-color: #141D2F;
+}
+
+h1.dark {
+  color: #FFF;
+}
+
+.profile__name.dark,
+.profile__joined.dark,
+.profile__bio.dark {
+  color: #FFF;
+}
+
+.search-bar.dark,
+.search-bar__input.dark,
+.display.dark {
+  background-color: #1E2A47;
+}
+
+.stats.dark {
+  background-color: #141D2F;
+}
+
+.stats__repos.dark,
+.stats__followers.dark,
+.stats__following.dark {
+  color: #FFF;
+}
+
+.stats__repo-number.dark,
+.stats__followers-number.dark,
+.stats__following-number.dark {
+  color: #FFF;
+}
+
+.display.dark,
+.search-bar.dark {
+  box-shadow: 0;
+}
+
+.search-bar__input.dark {
+  color: #FFF;
+}
+
+.links.dark {
+  color: #FFF;
+}
+
+a.dark {
+  color: #FFF;
 }
 
 /*# sourceMappingURL=style.css.map */

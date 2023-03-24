@@ -14,8 +14,7 @@ html {
 }
 
 body {
-  background-color: $color-blue-primary;
-  background-color: $color-white-grey;
+  // background-color: $color-white-grey;
   line-height: 26px;
   margin: 0 auto;
   overflow-x: hidden;
@@ -23,10 +22,15 @@ body {
 }
 
 main {
+
 }
 
 h1 {
-  color: #222731;
+  // color: #222731;
+}
+
+::placeholder {
+  opacity: 1;
 }
 
 .top-bar {
@@ -56,8 +60,8 @@ h1 {
 
 // Search Bar
 .search-bar {
-  // border: 2px solid red;
-  background-color: $color-white;
+ 
+  // background-color: $color-white;
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
@@ -66,9 +70,7 @@ h1 {
   margin: 0 auto;
   padding: 0.5rem;
   height: 60px;
-  // box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
-  // -webkit-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
-  // -moz-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
+ 
 
   &__input {
     width: 60%;
@@ -96,15 +98,9 @@ h1 {
   margin-left: 0.5rem;
 }
 
-.display,
-.search-bar {
-  box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
-  -moz-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
-}
 
 .display {
-  background-color: $color-white-smoke;
+  // background-color: $color-white-smoke;
   border-radius: 20px;
   max-width: 95%;
   padding: 1rem;
@@ -136,7 +132,7 @@ h1 {
   }
 
   &__joined {
-    color: $color-slate-grey;
+    // color: $color-slate-grey;
   }
 
   &__bio {
@@ -150,7 +146,7 @@ h1 {
 .stats {
   display: flex;
   justify-content: space-around;
-  background-color: $color-white-grey;
+  // background-color: $color-white-grey;
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
@@ -159,12 +155,12 @@ h1 {
   }
 
   &__repos {
-    color: $color-steel-blue;
+    // color: $color-steel-blue;
     margin-bottom: 8px;
   }
 
   &__repo-number {
-    color: $color-navy-blue;
+    // color: $color-navy-blue;
     font-weight: $font-bold;
   }
 
@@ -172,12 +168,12 @@ h1 {
   }
 
   &__followers {
-    color: $color-steel-blue;
+    // color: $color-steel-blue;
     margin-bottom: 8px;
   }
 
   &__followers-number {
-    color: $color-navy-blue;
+    // color: $color-navy-blue;
     font-weight: $font-bold;
   }
 
@@ -185,12 +181,12 @@ h1 {
   }
 
   &__following {
-    color: $color-steel-blue;
+    // color: $color-steel-blue;
     margin-bottom: 8px;
   }
 
   &__following-number {
-    color: $color-navy-blue;
+    // color: $color-navy-blue;
     font-weight: $font-bold;
     margin-bottom: 8px;
   }
@@ -201,7 +197,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  color: $color-steel-blue;
+  // color: $color-steel-blue;
   margin-bottom: 2.5rem;
   padding: 0.5rem;
 
@@ -229,10 +225,149 @@ h1 {
 }
 
 a {
-  color: $color-steel-blue;
+  // color: $color-steel-blue;
   text-decoration: none;
 }
 
 input:focus {
   outline: 1px dotted $color-slate-grey;
 }
+
+//ICONS
+#icon-moon {
+  display: block;
+}
+
+#icon-sun {
+  display: none;
+}
+
+
+
+//LIGHT THEMES
+
+body.light {
+  background-color: $color-white-grey;
+}
+
+h1.light {
+  color: #222731;
+}
+
+
+
+.profile__name.light,
+.profile__joined.light,
+.profile__bio.light {
+    color: $color-slate-grey;
+}
+
+
+.search-bar.light,
+.search-bar__input.light
+ {
+
+  background-color: $color-white;
+
+}
+
+.stats.light {
+  background-color: $color-white-grey;
+}
+
+.stats__repos.light,
+.stats__followers.light,
+.stats__following.light {
+  color: $color-steel-blue;
+}
+
+.stats__repo-number.light,
+.stats__followers-number.light,
+.stats__following-number.light {
+  color: $color-navy-blue;
+
+}
+
+.display.light {
+  background-color: $color-white-smoke;
+}
+
+.display.light,
+.search-bar.light {
+  box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(184, 184, 184, 0.75);
+}
+
+.search-bar__input.light {
+  color: $color-steel-blue;
+ }
+
+ .links.light {
+  color: $color-steel-blue;
+ }
+ 
+ a.light {
+  color: $color-steel-blue;
+ }
+
+
+
+// DARK THEMES
+
+body.dark {
+  background-color: $color-dark-navy;
+}
+
+h1.dark {
+  color: $color-white;
+}
+
+.profile__name.dark,
+.profile__joined.dark,
+.profile__bio.dark {
+    color: $color-white;
+}
+
+.search-bar.dark,
+.search-bar__input.dark,
+.display.dark {
+
+  background-color: $color-dark-steel;
+
+}
+
+.stats.dark {
+  background-color: $color-dark-navy;
+}
+
+.stats__repos.dark,
+.stats__followers.dark,
+.stats__following.dark {
+  color: $color-white;
+}
+
+.stats__repo-number.dark,
+.stats__followers-number.dark,
+.stats__following-number.dark {
+  color: $color-white;
+
+}
+
+.display.dark,
+.search-bar.dark {
+  box-shadow: 0;
+}
+
+.search-bar__input.dark {
+  color: $color-white;
+ }
+
+ .links.dark {
+  color: $color-white;
+ }
+
+ a.dark {
+  color: $color-white;
+ }
+
