@@ -111,25 +111,31 @@ body {
   display: flex;
   justify-content: space-around;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 18px;
   text-align: center;
 }
 .stats__repos {
+  font-size: 11px;
   margin-bottom: 8px;
 }
 .stats__repo-number {
+  font-size: 24px;
   font-weight: 700;
 }
 .stats__followers {
+  font-size: 11px;
   margin-bottom: 8px;
 }
 .stats__followers-number {
+  font-size: 24px;
   font-weight: 700;
 }
 .stats__following {
+  font-size: 11px;
   margin-bottom: 8px;
 }
 .stats__following-number {
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -221,6 +227,10 @@ a.light {
   color: #4b6A9B;
 }
 
+.links__icons.light path {
+  fill: #4b6A9B;
+}
+
 body.dark {
   background-color: #141D2F;
 }
@@ -272,6 +282,10 @@ h1.dark {
 
 a.dark {
   color: #FFF;
+}
+
+.links__icons.dark path {
+  fill: #FFF;
 }
 
 /*# sourceMappingURL=style.css.map */

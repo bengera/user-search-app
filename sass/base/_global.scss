@@ -148,21 +148,20 @@ h1 {
 .stats {
   display: flex;
   justify-content: space-around;
-  // background-color: $color-white-grey;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 18px;
   text-align: center;
 
   &__left {
   }
 
   &__repos {
-    // color: $color-steel-blue;
+    font-size: 11px;
     margin-bottom: 8px;
   }
 
   &__repo-number {
-    // color: $color-navy-blue;
+    font-size: 24px;
     font-weight: $font-bold;
   }
 
@@ -170,12 +169,12 @@ h1 {
   }
 
   &__followers {
-    // color: $color-steel-blue;
+    font-size: 11px;
     margin-bottom: 8px;
   }
 
   &__followers-number {
-    // color: $color-navy-blue;
+    font-size: 24px;
     font-weight: $font-bold;
   }
 
@@ -183,12 +182,12 @@ h1 {
   }
 
   &__following {
-    // color: $color-steel-blue;
+    font-size: 11px;
     margin-bottom: 8px;
   }
 
   &__following-number {
-    // color: $color-navy-blue;
+    font-size: 24px;
     font-weight: $font-bold;
     margin-bottom: 8px;
   }
@@ -313,6 +312,9 @@ h1.light {
   color: $color-steel-blue;
  }
 
+ .links__icons.light path {
+  fill: $color-steel-blue;
+ }
 
 
 // DARK THEMES
@@ -372,4 +374,9 @@ h1.dark {
  a.dark {
   color: $color-white;
  }
+
+  .links__icons.dark path {
+  fill: $color-white;
+ }
+
 
