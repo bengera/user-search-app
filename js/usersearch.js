@@ -26,19 +26,15 @@ function fetchUserData() {
            
       profilePicture.src = data.avatar_url;
       profilePicture.alt = `${data.login} avatar`;
-
       username.innerHTML = `${data.name}`;
       profileUsername.innerHTML = `${data.login}`;
-      biography.innerHTML = `${data.bio}`;
-
+      biography.innerHTML = data.bio ? `${data.bio}` : 'No bio';
       repoNumber.innerHTML = `${data.public_repos}`;
       followerNumber.innerHTML = `${data.followers}`;
       followingNumber.innerHTML = `${data.following}`;
       joinedDate.innerHTML = formatDate(data.created_at);
-
       locationEl.innerHTML = data.location ? `${data.location}` : 'Not available';
       website.innerHTML = data.blog ? `<a href="${/^https?:\/\//i.test(data.blog) ? data.blog : 'https://' + data.blog}" target="_blank">${data.blog}</a>` : 'Not available';
-      // website.innerHTML = data.blog ? `<a href="${data.blog}" target="_blank">${data.blog}</a>` : 'Not available';
       twitter.innerHTML = data.twitter_username ? `<a href="https://twitter.com/${data.twitter_username}" target="_blank">${data.twitter_username}</a>` : 'Not available';
       company.innerHTML = data.company ? `<a href="https://github.com/${data.company}" target="_blank">${data.company}` : 'Not available';
 
@@ -46,27 +42,19 @@ function fetchUserData() {
     })
     .catch(error => {
       console.error(error);
-      // Display error message to user
+      alert('There was an error with your request. Please check your spelling or try again later.');
     });
 }
 
-searchForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  fetchUserData();
-});
-
-searchButton.addEventListener('click', () => {
-  fetchUserData();
-});
-
-usernameInput.addEventListener('keydown', (e) => {
+searchForm.addEventListener('submit', fetchUserData);
+searchButton.addEventListener('click', fetchUserData);
+usernameInput.addEventListener('keydown', e => {
   if (e.key === 'Enter') {
     e.preventDefault();
     fetchUserData();
   }
 });
 
-// CHANGE DATE FORMAT
 
 function formatDate(dateString) {
   const date = new Date(dateString);
@@ -83,3 +71,30 @@ function getNumberSuffix(day) {
   return suffixes[(day > 10 && day < 14) ? 0 : (lastDigit <= 3 ? lastDigit : 0)];
 }
 
+
+
+// REMOVED
+
+      // website.innerHTML = data.blog ? `<a href="${data.blog}" target="_blank">${data.blog}</a>` : 'Not available';
+
+      // searchForm.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   fetchUserData();
+// });
+
+// searchButton.addEventListener('click', () => {
+//   fetchUserData();
+// });
+
+// usernameInput.addEventListener('keydown', (e) => {
+//   if (e.key === 'Enter') {
+//     e.preventDefault();
+//     fetchUserData();
+//   }
+// });
+
+// CHANGE DATE FORMAT
+
+// function handleSubmit() {
+//   fetchUserData();
+// }
