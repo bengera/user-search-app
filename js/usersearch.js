@@ -23,7 +23,7 @@ function fetchUserData() {
   fetch(`https://api.github.com/users/${usernameValue}`)
     .then(res => res.json())
     .then(data => {
-           
+         
       profilePicture.src = data.avatar_url;
       profilePicture.alt = `${data.login} avatar`;
       username.innerHTML = `${data.name}`;
@@ -33,10 +33,11 @@ function fetchUserData() {
       followerNumber.innerHTML = `${data.followers}`;
       followingNumber.innerHTML = `${data.following}`;
       joinedDate.innerHTML = formatDate(data.created_at);
-      locationEl.innerHTML = data.location ? `${data.location}` : 'Not available';
-      website.innerHTML = data.blog ? `<a href="${/^https?:\/\//i.test(data.blog) ? data.blog : 'https://' + data.blog}" target="_blank">${data.blog}</a>` : 'Not available';
-      twitter.innerHTML = data.twitter_username ? `<a href="https://twitter.com/${data.twitter_username}" target="_blank">${data.twitter_username}</a>` : 'Not available';
-      company.innerHTML = data.company ? `<a href="https://github.com/${data.company}" target="_blank">${data.company}` : 'Not available';
+      locationEl.innerHTML = data.location ? `${data.location}` : '<span class="na">Not available</span>';
+      website.innerHTML = data.blog ? `<a href="${/^https?:\/\//i.test(data.blog) ? data.blog : 'https://' + data.blog}" target="_blank">${data.blog}</a>` : '<span class="na">Not available</span>';
+      twitter.innerHTML = data.twitter_username ? `<a href="https://twitter.com/${data.twitter_username}" target="_blank">${data.twitter_username}</a>` : '<span class="na">Not available</span>';
+      company.innerHTML = data.company ? `<a href="https://github.com/${data.company}" target="_blank">${data.company}</a>` : '<span class="na">Not available</span>';
+   
 
       console.log(data);
     })

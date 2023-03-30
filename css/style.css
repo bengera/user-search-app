@@ -171,6 +171,14 @@ input:focus {
   display: none;
 }
 
+.not-available {
+  color: grey;
+}
+
+.na {
+  opacity: 0.75;
+}
+
 body.light {
   background-color: #F6F8FF;
 }
@@ -222,10 +230,6 @@ h1.light {
 }
 
 .links.light {
-  color: #4b6A9B;
-}
-
-a.light {
   color: #4b6A9B;
 }
 
@@ -282,12 +286,38 @@ h1.dark {
   color: #FFF;
 }
 
-a.dark {
+.links__icons.dark path {
+  fill: #FFF;
+}
+
+a:link,
+a:visited {
+  color: #4b6A9B;
+}
+
+a:hover,
+a:active {
   color: #FFF;
 }
 
-.links__icons.dark path {
-  fill: #FFF;
+.light a:link,
+.light a:visited {
+  color: #4b6A9B;
+}
+
+.light a:hover,
+.light a:active {
+  color: #4b6A9B;
+}
+
+.dark a:link,
+.dark a:visited {
+  color: #FFF;
+}
+
+.dark a:hover,
+.dark a:active {
+  color: #FFF;
 }
 
 /*# sourceMappingURL=style.css.map */

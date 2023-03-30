@@ -244,6 +244,15 @@ input:focus {
   display: none;
 }
 
+.not-available {
+  color: grey;
+}
+
+.na {
+  opacity: 0.75;
+  // pointer-events: none;
+  // cursor: default;
+}
 
 
 //LIGHT THEMES
@@ -309,13 +318,12 @@ h1.light {
   color: $color-steel-blue;
  }
  
- a.light {
-  color: $color-steel-blue;
- }
 
  .links__icons.light path {
   fill: $color-steel-blue;
  }
+
+ 
 
 
 // DARK THEMES
@@ -372,12 +380,46 @@ h1.dark {
   color: $color-white;
  }
 
- a.dark {
-  color: $color-white;
- }
+ 
 
+ 
   .links__icons.dark path {
   fill: $color-white;
  }
+
+
+ //LINKS
+
+ a:link,
+a:visited {
+  color: $color-steel-blue;
+}
+
+a:hover,
+a:active {
+  color: $color-white;
+}
+
+.light a:link,
+.light a:visited {
+  color: $color-steel-blue;
+}
+
+.light a:hover,
+.light a:active {
+  color: $color-steel-blue;
+}
+
+.dark a:link,
+.dark a:visited {
+  color: $color-white;
+}
+
+.dark a:hover,
+.dark a:active {
+  color: $color-white;
+}
+
+
 
 
