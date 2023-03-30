@@ -36,10 +36,11 @@ function fetchUserData() {
       followingNumber.innerHTML = `${data.following}`;
       joinedDate.innerHTML = formatDate(data.created_at);
 
-      locationEl.innerHTML = `${data.location}`;     
-      website.innerHTML = `<a href="https://${data.blog}" target="_blank">${data.blog}</a>`;
-      twitter.innerHTML = `<a href="https://twitter.com/${data.twitter_username}" target="_blank">${data.twitter_username}</a>`
-      company.innerHTML = `<a href="https://github.com/${data.company}" target="_blank">${data.company}`
+      locationEl.innerHTML = data.location ? `${data.location}` : 'Not available';
+      website.innerHTML = data.blog ? `<a href="https://${data.blog}" target="_blank">${data.blog}</a>` : 'Not available';
+      twitter.innerHTML = data.twitter_username ? `<a href="https://twitter.com/${data.twitter_username}" target="_blank">${data.twitter_username}</a>` : 'Not available';
+      company.innerHTML = data.company ? `<a href="https://github.com/${data.company}" target="_blank">${data.company}` : 'Not available';
+
       console.log(data);
     })
     .catch(error => {
