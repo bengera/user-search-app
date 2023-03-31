@@ -24,7 +24,7 @@ function fetchUserData() {
   const usernameValue = usernameInput.value.trim();;
   if (!usernameValue) {
     errorEl.style.display = 'block';
-    usernameInput.style.width = "47%";
+    usernameInput.style.width = "40%";
     return;
   }
 
