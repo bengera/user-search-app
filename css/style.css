@@ -61,6 +61,13 @@ body {
   border: 0;
   color: #4b6A9B;
 }
+.search-bar__error-message {
+  display: none;
+  color: #F74646;
+  font-weight: 700;
+  font-size: 13px;
+  padding-right: 5px;
+}
 
 .btn-search {
   background-color: #0079FF;

@@ -82,6 +82,15 @@ h1 {
     border: 0;
     color: $color-steel-blue;
   }
+
+  &__error-message {
+    display: none;
+    color: $color-red-error;
+    font-weight: $font-bold;
+    font-size: 13px;
+    padding-right: 5px;
+    // width: 125px;
+  }
 }
 
 .btn-search {
