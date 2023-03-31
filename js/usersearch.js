@@ -66,7 +66,7 @@ function fetchUserData() {
       console.error(error);
       errorEl.style.display = 'block';
       console.log('error, invalid input')
-      usernameInput.style.width = "47%";
+      usernameInput.style.width = "40%";
     });
 }
 
