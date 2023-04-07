@@ -22,14 +22,13 @@ body {
 }
 
 main {
-
 }
+
+$bp-tablet: 600px;
 
 h1 {
   // color: #222731;
 }
-
-
 
 ::placeholder {
   opacity: 1;
@@ -48,21 +47,20 @@ h1 {
     font-weight: $font-bold;
     font-family: inherit;
     letter-spacing: 2.5px;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     border: 0;
     cursor: pointer;
   }
 
-   // &__theme-icon {
+  // &__theme-icon {
   //   margin-top: 0;
   // }
 }
 
 // Search Bar
 .search-bar {
- 
   // background-color: $color-white;
   border-radius: 15px;
   display: flex;
@@ -72,7 +70,6 @@ h1 {
   margin: 0 auto;
   padding: 0.5rem;
   height: 60px;
- 
 
   &__input {
     width: 60%;
@@ -104,12 +101,22 @@ h1 {
   font-weight: 700;
   cursor: pointer;
   z-index: 1000;
+
+  @media only screen and (min-width: $bp-tablet) {
+    width: 106px;
+  }
 }
 
 .search-bar > svg:nth-child(1) {
   margin-left: 0.5rem;
 }
 
+.search-bar__input {
+  @media only screen and (min-width: $bp-tablet) {
+    font-size: 18px;
+    width: 70%;
+  }
+}
 
 .display {
   // background-color: $color-white-smoke;
@@ -122,7 +129,6 @@ h1 {
   flex-direction: column;
   gap: 23px;
   margin-bottom: 2rem;
-  
 }
 
 //profile
@@ -136,6 +142,11 @@ h1 {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+
+    @media only screen and (min-width: $bp-tablet) {
+      width: 117px;
+      height: 117px;
+    }
   }
 
   &__name {
@@ -154,6 +165,13 @@ h1 {
     grid-column: 1/-1;
     margin-top: 2.0625rem;
   }
+
+  &__right-content {
+    @media only screen and (min-width: $bp-tablet) {
+      padding-left: 41px;
+      padding-top: 1rem;
+    }
+  }
 }
 
 // stats
@@ -163,6 +181,11 @@ h1 {
   border-radius: 10px;
   padding: 18px;
   text-align: center;
+
+  @media only screen and (min-width: $bp-tablet) {
+    width: 95%;
+    margin: 0 auto;
+  }
 
   &__left {
   }
@@ -205,14 +228,28 @@ h1 {
   }
 }
 
+.stats__repo-number,
+.stats__followers-number,
+.stats__following-number {
+  @media only screen and (min-width: $bp-tablet) {
+    text-align: left;
+  }
+  
+}
+
 //links
 .links {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  // color: $color-steel-blue;
   margin-bottom: 2.5rem;
   padding: 0.5rem;
+
+  @media only screen and (min-width: $bp-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 3rem;
+  }
 
   &__location,
   &__twitter,
@@ -265,7 +302,6 @@ input:focus {
   // cursor: default;
 }
 
-
 //LIGHT THEMES
 
 body.light {
@@ -276,21 +312,15 @@ h1.light {
   color: #222731;
 }
 
-
-
 .profile__name.light,
 .profile__joined.light,
 .profile__bio.light {
-    color: $color-slate-grey;
+  color: $color-slate-grey;
 }
 
-
 .search-bar.light,
-.search-bar__input.light
- {
-
+.search-bar__input.light {
   background-color: $color-white;
-
 }
 
 .stats.light {
@@ -307,7 +337,6 @@ h1.light {
 .stats__followers-number.light,
 .stats__following-number.light {
   color: $color-navy-blue;
-
 }
 
 .display.light {
@@ -323,19 +352,15 @@ h1.light {
 
 .search-bar__input.light {
   color: $color-steel-blue;
- }
+}
 
- .links.light {
+.links.light {
   color: $color-steel-blue;
- }
- 
+}
 
- .links__icons.light path {
+.links__icons.light path {
   fill: $color-steel-blue;
- }
-
- 
-
+}
 
 // DARK THEMES
 
@@ -350,15 +375,13 @@ h1.dark {
 .profile__name.dark,
 .profile__joined.dark,
 .profile__bio.dark {
-    color: $color-white;
+  color: $color-white;
 }
 
 .search-bar.dark,
 .search-bar__input.dark,
 .display.dark {
-
   background-color: $color-dark-steel;
-
 }
 
 .stats.dark {
@@ -375,7 +398,6 @@ h1.dark {
 .stats__followers-number.dark,
 .stats__following-number.dark {
   color: $color-white;
-
 }
 
 .display.dark,
@@ -385,23 +407,19 @@ h1.dark {
 
 .search-bar__input.dark {
   color: $color-white;
- }
+}
 
- .links.dark {
+.links.dark {
   color: $color-white;
- }
+}
 
- 
-
- 
-  .links__icons.dark path {
+.links__icons.dark path {
   fill: $color-white;
- }
+}
 
+//LINKS
 
- //LINKS
-
- a:link,
+a:link,
 a:visited {
   color: $color-steel-blue;
 }
@@ -430,7 +448,3 @@ a:active {
 .dark a:active {
   color: $color-white;
 }
-
-
-
-
