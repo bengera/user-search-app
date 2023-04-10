@@ -18,6 +18,23 @@ body {
   overflow-x: hidden;
   font-family: "Space Mono", monospace;
 }
+@media only screen and (min-width: 950px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  main {
+    max-width: 830px;
+    min-width: 800px;
+    margin: 0 auto;
+  }
+}
 
 ::placeholder {
   opacity: 1;
@@ -60,6 +77,11 @@ body {
   padding-left: 0.5rem;
   border: 0;
   color: #4b6A9B;
+}
+@media only screen and (min-width: 950px) {
+  .search-bar__input {
+    width: 70%;
+  }
 }
 .search-bar__error-message {
   display: none;
@@ -129,15 +151,40 @@ body {
 .profile__username {
   color: #0079FF;
 }
+@media only screen and (min-width: 950px) {
+  .profile__username {
+    margin-top: -35px;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .profile__joined {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    justify-self: end;
+  }
+}
 .profile__bio {
   color: #4b6A9B;
   grid-column: 1/-1;
   margin-top: 2.0625rem;
 }
+@media only screen and (min-width: 950px) {
+  .profile__bio {
+    grid-column: 2/-1;
+    margin-left: 41px;
+    margin-top: -30px;
+  }
+}
 @media only screen and (min-width: 600px) {
   .profile__right-content {
     padding-left: 41px;
     padding-top: 1rem;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .profile__right-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -152,6 +199,15 @@ body {
   .stats {
     width: 95%;
     margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .stats {
+    width: 78%;
+    margin: 0 0 0 auto;
+    padding-left: -10px;
+    padding-right: 10%;
+    gap: 5rem;
   }
 }
 .stats__repos {
@@ -200,6 +256,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 3rem;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .links {
+    width: 78%;
+    margin: 0 0 0 auto;
   }
 }
 .links__location, .links__twitter, .links__website, .links__company {

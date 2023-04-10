@@ -13,10 +13,12 @@ const repoNumber = document.getElementById('repo-number');
 const followerNumber = document.getElementById('followers-number');
 const followingNumber = document.getElementById('following-number');
 
-const locationEl =  document.getElementById('location');
+const locationEl = document.getElementById('location');
 const company = document.getElementById('company');
 const twitter = document.getElementById('twitter');
 const website = document.getElementById('website')
+
+
 
 
 function fetchUserData() {
@@ -54,10 +56,20 @@ function fetchUserData() {
         followerNumber.innerHTML = `${data.followers}`;
         followingNumber.innerHTML = `${data.following}`;
         joinedDate.innerHTML = formatDate(data.created_at);
-        locationEl.innerHTML = data.location ? `${data.location}` : '<span class="na">Not available</span>';
-        website.innerHTML = data.blog ? `<a href="${/^https?:\/\//i.test(data.blog) ? data.blog : 'https://' + data.blog}" target="_blank">${data.blog}</a>` : '<span class="na">Not available</span>';
-        twitter.innerHTML = data.twitter_username ? `<a href="https://twitter.com/${data.twitter_username}" target="_blank">${data.twitter_username}</a>` : '<span class="na">Not available</span>';
-        company.innerHTML = data.company ? `<a href="https://github.com/${data.company}" target="_blank">${data.company}</a>` : '<span class="na">Not available</span>';
+        locationEl.innerHTML = data.location ? `${data.location}` : '<span class="na" style="opacity: 0.5;">Not available</span>';
+        website.innerHTML = data.blog ? `<a href="${/^https?:\/\//i.test(data.blog) ? data.blog : 'https://' + data.blog}" target="_blank">${data.blog}</a>` : '<span class="na" style="opacity: 0.5;">Not available</span>';
+        twitter.innerHTML = data.twitter_username ? `<a href="https://twitter.com/${data.twitter_username}" target="_blank">${data.twitter_username}</a>` : '<span class="na" style="opacity: 0.5;">Not available</span>';
+        company.innerHTML = data.company ? `<a href="https://github.com/${data.company}" target="_blank">${data.company}</a>` : '<span class="na" style="opacity: 0.5;">Not available</span>';
+     
+        
+    const svgs = document.getElementsByTagName('svg');
+    for (let i = 0; i < svgs.length; i++) {
+      if (svgs[i].parentNode.innerText.includes("Not available")) {
+        svgs[i].style.opacity = "0.5";
+      } else {
+        svgs[i].style.opacity = "1";
+      }
+    }
 
         console.log(data);
       }

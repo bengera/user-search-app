@@ -8,6 +8,9 @@
   box-sizing: inherit;
 }
 
+$bp-tablet: 600px;
+$bp-desktop: 950px;
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -19,12 +22,23 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
   font-family: $font-family;
+
+  @media only screen and (min-width: $bp-desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 main {
+  @media only screen and (min-width: $bp-desktop) {
+    max-width: 830px;
+    min-width: 800px;
+    margin: 0 auto;
+  }
 }
-
-$bp-tablet: 600px;
 
 h1 {
   // color: #222731;
@@ -78,6 +92,10 @@ h1 {
     padding-left: 0.5rem;
     border: 0;
     color: $color-steel-blue;
+
+    @media only screen and (min-width: $bp-desktop) {
+      width: 70%;
+    }
   }
 
   &__error-message {
@@ -154,22 +172,41 @@ h1 {
 
   &__username {
     color: $color-blue-primary;
+
+    @media only screen and (min-width: $bp-desktop) {
+      margin-top: -35px;
+    }
   }
 
   &__joined {
-    // color: $color-slate-grey;
+    @media only screen and (min-width: $bp-desktop) {
+      grid-column: 2/2;
+      grid-row: 1/1;
+      justify-self: end;
+    }
   }
 
   &__bio {
     color: $color-steel-blue;
     grid-column: 1/-1;
     margin-top: 2.0625rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      grid-column: 2/-1;
+      margin-left: 41px;
+      margin-top: -30px;
+    }
   }
 
   &__right-content {
     @media only screen and (min-width: $bp-tablet) {
       padding-left: 41px;
       padding-top: 1rem;
+    }
+
+    @media only screen and (min-width: $bp-desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
@@ -185,6 +222,14 @@ h1 {
   @media only screen and (min-width: $bp-tablet) {
     width: 95%;
     margin: 0 auto;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+    width: 78%;
+    margin: 0 0 0 auto;
+    padding-left: -10px;
+    padding-right: 10%;
+    gap: 5rem;
   }
 
   &__left {
@@ -234,7 +279,6 @@ h1 {
   @media only screen and (min-width: $bp-tablet) {
     text-align: left;
   }
-  
 }
 
 //links
@@ -251,6 +295,11 @@ h1 {
     margin-left: 3rem;
   }
 
+  @media only screen and (min-width: $bp-desktop) {
+    width: 78%;
+    margin: 0 0 0 auto;
+  }
+
   &__location,
   &__twitter,
   &__website,
@@ -259,6 +308,10 @@ h1 {
     gap: 1rem;
     align-items: center;
     margin-bottom: 3px;
+
+    //   @media only screen and (min-width: $bp-desktop) {
+    //     justify-self: end;
+    //  }
   }
 
   &__location {
