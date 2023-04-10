@@ -71,17 +71,12 @@ body {
   height: 60px;
 }
 .search-bar__input {
-  width: 60%;
+  flex-grow: 0.8;
   height: 60px;
   font-family: inherit;
   padding-left: 0.5rem;
   border: 0;
   color: #4b6A9B;
-}
-@media only screen and (min-width: 950px) {
-  .search-bar__input {
-    width: 70%;
-  }
 }
 .search-bar__error-message {
   display: none;
@@ -270,6 +265,7 @@ body {
   align-items: center;
   margin-bottom: 3px;
 }
+
 a {
   text-decoration: none;
 }
