@@ -23,7 +23,7 @@ body {
   overflow-x: hidden;
   font-family: $font-family;
 
-  @media only screen and (min-width: $bp-desktop) {
+  @media only screen and (min-width: $bp-tablet) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,13 +33,17 @@ body {
 }
 
 main {
+  @media only screen and (min-width: $bp-tablet) {
+    max-width: 573px;
+    margin: 0 auto;
+  }
+
   @media only screen and (min-width: $bp-desktop) {
-    max-width: 830px;
+    max-width: 573px;
     min-width: 800px;
     margin: 0 auto;
   }
 }
-
 
 ::placeholder {
   opacity: 1;
@@ -64,10 +68,7 @@ main {
     border: 0;
     cursor: pointer;
   }
-
-  
 }
-
 
 .search-bar {
   border-radius: 15px;
@@ -98,7 +99,6 @@ main {
     font-weight: $font-bold;
     font-size: 13px;
     padding-right: 5px;
-    
   }
 }
 
@@ -131,7 +131,6 @@ main {
 }
 
 .display {
-  
   border-radius: 20px;
   max-width: 95%;
   padding: 1rem;
@@ -143,9 +142,7 @@ main {
   margin-bottom: 2rem;
 }
 
-
 .profile {
-  
   display: grid;
   grid-template-columns: 100px 1fr;
   padding: 1rem;
@@ -161,7 +158,6 @@ main {
     }
   }
 
- 
   &__username {
     color: $color-blue-primary;
 
@@ -203,7 +199,6 @@ main {
   }
 }
 
-
 .stats {
   display: flex;
   justify-content: space-around;
@@ -217,7 +212,7 @@ main {
   }
 
   @media only screen and (min-width: $bp-desktop) {
-    width: 78%;
+    width: 80%;
     margin: 0 0 0 auto;
     padding-left: -10px;
     padding-right: 10%;
@@ -234,7 +229,6 @@ main {
     font-weight: $font-bold;
   }
 
-  
   &__followers {
     font-size: 11px;
     margin-bottom: 8px;
@@ -265,7 +259,6 @@ main {
   }
 }
 
-
 .links {
   display: flex;
   flex-direction: column;
@@ -277,6 +270,9 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 3rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    margin-left: 1.2rem;
   }
 
   @media only screen and (min-width: $bp-desktop) {
@@ -292,15 +288,10 @@ main {
     gap: 1rem;
     align-items: center;
     margin-bottom: 3px;
-
-    
   }
-
- 
 }
 
 a {
- 
   text-decoration: none;
 }
 
@@ -323,7 +314,6 @@ input:focus {
 
 .na {
   opacity: 0.75;
-  
 }
 
 //LIGHT THEMES

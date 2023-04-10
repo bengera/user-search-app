@@ -18,7 +18,7 @@ body {
   overflow-x: hidden;
   font-family: "Space Mono", monospace;
 }
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 600px) {
   body {
     display: flex;
     justify-content: center;
@@ -28,9 +28,15 @@ body {
   }
 }
 
+@media only screen and (min-width: 600px) {
+  main {
+    max-width: 573px;
+    margin: 0 auto;
+  }
+}
 @media only screen and (min-width: 950px) {
   main {
-    max-width: 830px;
+    max-width: 573px;
     min-width: 800px;
     margin: 0 auto;
   }
@@ -198,7 +204,7 @@ body {
 }
 @media only screen and (min-width: 950px) {
   .stats {
-    width: 78%;
+    width: 80%;
     margin: 0 0 0 auto;
     padding-left: -10px;
     padding-right: 10%;
@@ -251,6 +257,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 3rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    margin-left: 1.2rem;
   }
 }
 @media only screen and (min-width: 950px) {
