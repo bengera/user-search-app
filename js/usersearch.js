@@ -32,7 +32,7 @@ function fetchUserData() {
 
   if (errorEl.style.display === 'block') {
     errorEl.style.display = 'none';
-    // usernameInput.style.width = "60%";
+    
   }
 
   fetch(`https://api.github.com/users/${usernameValue}`)
