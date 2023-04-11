@@ -50,7 +50,7 @@ function fetchUserData() {
         profilePicture.src = data.avatar_url;
         profilePicture.alt = `${data.login} avatar`;
         username.innerHTML = `${data.name}`;
-        profileUsername.innerHTML = `${data.login}`;
+        profileUsername.innerHTML = `@${data.login}`;
         biography.innerHTML = data.bio ? `${data.bio}` : 'No bio';
         repoNumber.innerHTML = `${data.public_repos}`;
         followerNumber.innerHTML = `${data.followers}`;

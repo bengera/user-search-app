@@ -202,7 +202,7 @@ main {
 
     @media only screen and (min-width: $bp-desktop) {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 2fr 1fr;
     }
   }
 }
