@@ -51,13 +51,13 @@ function fetchUserData() {
         profilePicture.alt = `${data.login} avatar`;
         username.innerHTML = `${data.name}`;
         profileUsername.innerHTML = `@${data.login}`;
-        biography.innerHTML = data.bio ? `${data.bio}` : 'No bio';
+        biography.innerHTML = data.bio ? `${data.bio}` : 'This profile has no bio';
         repoNumber.innerHTML = `${data.public_repos}`;
         followerNumber.innerHTML = `${data.followers}`;
         followingNumber.innerHTML = `${data.following}`;
         joinedDate.innerHTML = formatDate(data.created_at);
         locationEl.innerHTML = data.location ? `${data.location}` : '<span class="na" style="opacity: 0.5;">Not available</span>';
-        website.innerHTML = data.blog ? `<a href="${/^https?:\/\//i.test(data.blog) ? data.blog : 'https://' + data.blog}" target="_blank">${data.blog}</a>` : '<span class="na" style="opacity: 0.5;">Not available</span>';
+        website.innerHTML = data.blog ? `<a href="${/^https?:\/\//i.test(data.blog) ? data.blog : 'https://' + data.blog}" target="_blank">${data.blog}</a>` : '<span class="na" style="opacity: 0.5;">Unavailable</span>';
         twitter.innerHTML = data.twitter_username ? `<a href="https://twitter.com/${data.twitter_username}" target="_blank">${data.twitter_username}</a>` : '<span class="na" style="opacity: 0.5;">Not available</span>';
         company.innerHTML = data.company ? `<a href="https://github.com/${data.company}" target="_blank">${data.company}</a>` : '<span class="na" style="opacity: 0.5;">Not available</span>';
      

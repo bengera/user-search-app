@@ -70,6 +70,14 @@ main {
     background-color: transparent;
     border: 0;
     cursor: pointer;
+
+    @media only screen and (min-width: $bp-desktop) {
+
+      &:hover {
+       
+      }
+      
+    }
   }
 }
 
@@ -119,6 +127,14 @@ main {
 
   @media only screen and (min-width: $bp-tablet) {
     width: 106px;
+  }
+
+  @media only screen and (min-width: $bp-desktop) {
+
+    &:hover {
+     background-color: #60ABFF;
+    }
+    
   }
 }
 
@@ -296,6 +312,8 @@ main {
     gap: 1rem;
     align-items: center;
     margin-bottom: 3px;
+
+       
   }
 }
 
@@ -322,6 +340,8 @@ input:focus {
 
 .na {
   opacity: 0.75;
+  text-decoration: none;
+  cursor: default;
 }
 
 //LIGHT THEMES
@@ -382,7 +402,10 @@ h1.light {
 
 .links__icons.light path {
   fill: $color-steel-blue;
+
+  
 }
+
 
 // DARK THEMES
 
@@ -459,6 +482,13 @@ a:active {
 .light a:hover,
 .light a:active {
   color: $color-steel-blue;
+  @media only screen and (min-width: $bp-desktop) {
+
+    &:hover {
+     text-decoration: underline;
+    }
+    
+  }
 }
 
 .dark a:link,
@@ -469,4 +499,25 @@ a:active {
 .dark a:hover,
 .dark a:active {
   color: $color-white;
+
+  @media only screen and (min-width: $bp-desktop) {
+
+    &:hover {
+     text-decoration: underline;
+    }
+    
+  }
 }
+
+#theme-switcher:hover {
+  color: $color-dark-navy;
+}
+#theme-switcher:hover #icon-moon path {
+  fill: $color-dark-navy;
+}
+
+#theme-switcher:hover #icon-sun path {
+  fill: $color-steel-blue;
+}
+
+
