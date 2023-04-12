@@ -99,9 +99,7 @@ main {
     border: 0;
     color: $color-steel-blue;
 
-    // @media only screen and (min-width: $bp-desktop) {
-    //   width: 100%;
-    // }
+   
   }
 
   &__error-message {
@@ -508,6 +506,8 @@ a:active {
     
   }
 }
+
+// THEMES HOVER
 
 #theme-switcher:hover {
   color: $color-dark-navy;
